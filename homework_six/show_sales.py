@@ -1,7 +1,7 @@
 import sys
 
-if __name__ == 'main':
-    interval = list(map(sys.argv[1:]))
+if __name__ == '__main__':
+    interval = list(map(int,sys.argv[1:]))
     with open('bakery.csv') as f:
         text = f.readlines()
         if len(interval) == 2:

@@ -1,7 +1,7 @@
 import sys
 
 users, hobbys, combined = sys.argv[1:]
-if __name__ == 'main':
+if __name__ == '__main__':
     from itertools import zip_longest
 
     print(dir(sys.argv))

@@ -1,5 +1,5 @@
 import os
-
+import json
 
 def scan_dir(name):
     name_tuple = {}
@@ -16,7 +16,8 @@ def scan_dir(name):
             name_tuple[key][1] = list(set(name_tuple[key][1]))
     for key, val in name_tuple.items():
         name_tuple[key] = tuple(val)
-
+    with open(f'{name}_summary.json' , 'w', encoding='utf-8') as f:
+        json.dump(name_tuple, f, indent=4)
     print(name_tuple)
 
 folder = 'some_data'
